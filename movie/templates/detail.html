@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Add movies
+{% endblock %}
+{% block content %}
+
+<div class="container">
+<div class="row">
+    <div class="col-md-6 mt-5">
+        <img src="{{m.image.url}}" height="300px" width="300px" >
+         </div>
+    <div class="col-md-6 mt-5">
+        <h1>{{m.name}}</h1>
+        <h4>{{m.year}}</h4>
+        <h6>{{m.description}}</h6>
+        <a href="{% url 'ticket:update' m.id%}" class="btn btn-secondary">Update</a>
+        <a href="{% url 'ticket:delete' m.id%}" class="btn btn-secondary">Delete</a>
+
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}

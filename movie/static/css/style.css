@@ -1,0 +1,8 @@
+body{
+background-color:#754885;
+}
+
+.card:hover{
+transform: scale(1.05);
+
+}
